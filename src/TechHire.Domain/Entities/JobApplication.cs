@@ -1,5 +1,7 @@
 namespace TechHire.Domain.Entities;
 
+using TechHire.Domain.Enums;
+
 public class JobApplication : BaseEntity
 {
     public required Guid VacancyId { get; set; }

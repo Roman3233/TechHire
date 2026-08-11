@@ -17,5 +17,13 @@ public class AppDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Skill>().HasKey(s => s.Name);
+
+        modelBuilder.Entity<CandidateProfile>()
+            .HasMany(c => c.Skills)
+            .WithMany(); 
+
+        modelBuilder.Entity<Vacancy>()
+            .HasMany(v => v.RequiredSkills)
+            .WithMany();
     }
 }

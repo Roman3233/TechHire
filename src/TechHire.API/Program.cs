@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using TechHire.Domain.Entities;
 using TechHire.Infrastructure.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
